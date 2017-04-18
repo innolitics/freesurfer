@@ -54,6 +54,8 @@ set cmd=(../mri_ca_register \
     -nobigventricles \
     -T talairach.lta \
     -align-after \
+    -levels 3 \
+    -tol 0.1 \
     -mask brainmask.mgz \
     norm.mgz \
     $FREESURFER_HOME/average/RB_all_2016-05-10.vc700.gca \
@@ -98,6 +100,8 @@ if (-e ../mri_ca_register_cuda && -e TEST_CUDA) then
     -nobigventricles \
     -T talairach.lta \
     -align-after \
+    -levels 3 \
+    -tol 0.1 \
     -mask brainmask.mgz \
     norm.mgz \
     $FREESURFER_HOME/average/RB_all_2016-05-10.vc700.gca \
