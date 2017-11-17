@@ -55,7 +55,7 @@ def samsseg_registerAtlas(
     if show_figures:
         show_mesh(mesh, image_buffer, color_scheme)
 
-    calculator = create_calculator(mesh)
+    calculator = create_calculator(mesh, image)
 
     initial_image_to_image_transform_matrix = find_low_cost_initial_mesh_position(
         calculator,
@@ -251,7 +251,7 @@ def show_mesh(mesh, image_buffer, color_scheme):
     pass
 
 
-def create_calculator(mesh):
+def create_calculator(mesh, image):
     #
     # %
     # % Get a registration cost and use it to evaluate some promising starting point proposals
